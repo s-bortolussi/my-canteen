@@ -2,9 +2,9 @@ package com.sample.canteen;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public interface MenuRepository extends MongoRepository<Menu, String> {
 
-    Menu findByDate(Date date);
+    Menu findByDate(LocalDate date);
 }

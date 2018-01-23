@@ -3,14 +3,14 @@ package com.sample.canteen;
 
 import org.springframework.data.annotation.Id;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Menu {
 
     @Id
     public String id;
 
-    private Date date;
+    private LocalDate date;
 
     private String starter;
 
@@ -20,7 +20,7 @@ public class Menu {
 
     private String dessert;
 
-    public Menu(Date date, String starter, String mainCourse, String sideOrder, String dessert) {
+    public Menu(LocalDate date, String starter, String mainCourse, String sideOrder, String dessert) {
         this.date = date;
         this.starter = starter;
         this.mainCourse = mainCourse;
@@ -28,7 +28,7 @@ public class Menu {
         this.dessert = dessert;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 

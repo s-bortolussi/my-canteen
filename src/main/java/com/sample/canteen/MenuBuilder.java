@@ -1,15 +1,15 @@
 package com.sample.canteen;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class MenuBuilder {
-    private Date date;
+    private LocalDate date;
     private String starter;
     private String mainCourse;
     private String sideOrder;
     private String dessert;
 
-    public MenuBuilder date(Date date) {
+    public MenuBuilder date(LocalDate date) {
         this.date = date;
         return this;
     }
