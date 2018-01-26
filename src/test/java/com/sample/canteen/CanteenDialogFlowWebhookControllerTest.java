@@ -59,8 +59,8 @@ public class CanteenDialogFlowWebhookControllerTest {
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.speech", Matchers.equalTo("Au menu de 2018-01-23, en entrée : a starter , en plat principal : a main course et a side order, en dessert : a dessert. Bon appetit :-)\n. Je reste disponible pour vous donner le menu d'un autre jour.")))
-                .andExpect(jsonPath("$.displayText", Matchers.equalTo("Au menu de 2018-01-23, en entrée : a starter , en plat principal : a main course et a side order, en dessert : a dessert. Bon appetit :-)\n. Je reste disponible pour vous donner le menu d'un autre jour.")));
+                .andExpect(jsonPath("$.speech", Matchers.equalTo("Au menu, en entrée : a starter , en plat principal : a main course et a side order, en dessert : a dessert. Bon appetit.\n Je reste disponible pour vous donner le menu d'un autre jour.")))
+                .andExpect(jsonPath("$.displayText", Matchers.equalTo("Au menu, en entrée : a starter , en plat principal : a main course et a side order, en dessert : a dessert. Bon appetit.\n Je reste disponible pour vous donner le menu d'un autre jour.")));
     }
 
     private WebhookRequest webhookRequest() {

@@ -33,7 +33,7 @@ public class CanteenDialogFlowWebhookController {
     }
 
     private String generateTextResponse(Menu menu) {
-        return String.format("Au menu de %s, en entrée : %s , en plat principal : %s et %s, en dessert : %s. Bon appetit :-)\n. Je reste disponible pour vous donner le menu d'un autre jour.", menu.getDate().toString(), menu.getStarter(), menu.getMainCourse(), menu.getSideOrder(), menu.getDessert());
+        return String.format("Au menu, en entrée : %s , en plat principal : %s et %s, en dessert : %s. Bon appetit.\n Je reste disponible pour vous donner le menu d'un autre jour.", menu.getStarter(), menu.getMainCourse(), menu.getSideOrder(), menu.getDessert());
     }
 
     private LocalDate getDate(WebhookRequest request) {
